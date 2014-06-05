@@ -11,26 +11,7 @@
  * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaphp.com/license
  */
-interface Kohana_HTTP_Request extends HTTP_Message {
-
-	// HTTP Methods
-	const GET       = 'GET';
-	const POST      = 'POST';
-	const PUT       = 'PUT';
-	const DELETE    = 'DELETE';
-	const HEAD      = 'HEAD';
-	const OPTIONS   = 'OPTIONS';
-	const TRACE     = 'TRACE';
-	const CONNECT   = 'CONNECT';
-
-	/**
-	 * Gets or sets the HTTP method. Usually GET, POST, PUT or DELETE in
-	 * traditional CRUD applications.
-	 *
-	 * @param   string   $method  Method to use for this request
-	 * @return  mixed
-	 */
-	public function method($method = NULL);
+interface Kohana_HTTP_Request extends HTTP_Message, HTTP_Method {
 
 	/**
 	 * Gets the URI of this request, optionally allows setting
